@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Prometheus",
+    "type": "prometheus",
+    "orgId": 1,
+    "url": "http://prometheus-operated.${kubernetes_namespace.observability.metadata.0.name}.svc.cluster.local:9090",
+    "access": "proxy",
+    "isDefault": true,
+    "jsonData": {
+      "timeInterval": "5s"
+    },
+    "editable": true
+  },
+  {
+    "name": "Loki",
+    "type": "loki",
+    "orgId": 1,
+    "url": "http://loki.${kubernetes_namespace.observability.metadata.0.name}.svc.cluster.local:9090",
+    "access": "proxy",
+    "isDefault": false,
+    "jsonData": {
+      "timeInterval": "5s"
+    },
+    "editable": true
+  }
+]

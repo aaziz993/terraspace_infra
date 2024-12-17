@@ -1,0 +1,6 @@
+{
+  "id": "example-realm",
+  "realm": "example-realm",
+  "displayName": "ExampleRealm",
+  "enabled": true
+}

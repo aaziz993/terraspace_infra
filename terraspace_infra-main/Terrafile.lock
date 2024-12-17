@@ -1,0 +1,12 @@
+---
+cert-manager:
+  source: terraform-iaac/cert-manager/kubernetes
+  type: registry
+  url: https://github.com/terraform-iaac/terraform-kubernetes-cert-manager
+  sha: 01d7f05e101af0b26c0637989ae3c00de271d129
+istio-operator:
+  source: https://github.com/canada-ca-terraform-modules/terraform-kubernetes-istio-operator.git
+  version: v2.6.0
+  type: git
+  url: https://github.com/canada-ca-terraform-modules/terraform-kubernetes-istio-operator.git
+  sha: c4033096d3c18ae9c1204b7595e69eb0b5be55e2

@@ -1,0 +1,18 @@
+---
+# ClusterRole to allow spire-server node attestor to query Token Review API
+# manage SPIRE CA
+# and to be able to push certificate bundles to a configmap
+kind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: {{ template "spire-server.fullname" . }}-trust-role
+rules:
+  - apiGroups: [ "authentication.k8s.io" ]
+    resources: [ "tokenreviews" ]
+    verbs: [ "create" ]
+  - apiGroups: [ "" ]
+    resources: [ "configmaps" ]
+    verbs: [ "patch", "get", "list" ]
+  - apiGroups: [ "cert-manager.io" ]
+    resources: [ "certificates","certificaterequests","issuers" ]
+    verbs: [ "*" ]

@@ -1,0 +1,11 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Values.k8sWorkloadRegister.name }}
+  namespace: {{ include "spire-server.namespace" . }}
+data:
+  {{- if .Values.k8sWorkloadRegister.config }}
+  k8s-workload-registrar.conf: |
+    {{ .Values.k8sWorkloadRegister.config | nindent 4 }}
+  {{- end }}

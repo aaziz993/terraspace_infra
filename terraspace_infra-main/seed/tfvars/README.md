@@ -1,0 +1,1 @@
+# Where you configure tfvars files for modules. Note, you can also configure tfvars files with a subfolder directly in the module, but it is not encouraged since modules should be reusable library code.
